@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Prints a natural numbers to factor.
+
+FILE=$1
+while read Fnumber
+do
+    factors=($(factor $Fnumber))
+    echo "$Fnumber=$(($Fnumber/${factors[1]}))*${factors[1]}"
+done < $FILE
+	(time ./a.out) 2>&1|grep real;
+	(time ./a.out) 2>&1|grep user;
+	(time ./a.out) 2>&1|grep sys;
