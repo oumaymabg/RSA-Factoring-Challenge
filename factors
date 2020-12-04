@@ -10,3 +10,4 @@ done < $FILE
 	(time ./a.out) 2>&1|grep real;
 	(time ./a.out) 2>&1|grep user;
 	(time ./a.out) 2>&1|grep sys;
+	
